@@ -14,28 +14,78 @@
     <form id="feedbackForm">
         <label>Course:</label>
         <input type="text" name="course" required>
-        <label>Rating:</label>
-        <select name="rating" required>
-            <option value="1">1 Star</option>
-            <option value="2">2 Stars</option>
-            <option value="3">3 Stars</option>
-            <option value="4">4 Stars</option>
-            <option value="5">5 Stars</option>
+
+        <label>How difficult was the course?</label>
+        <select name="difficulty" required>
+            <option value="Very Easy">Very Easy</option>
+            <option value="Easy">Easy</option>
+            <option value="Moderate">Moderate</option>
+            <option value="Difficult">Difficult</option>
+            <option value="Very Difficult">Very Difficult</option>
         </select>
-        <label>Comment:</label>
-        <textarea name="comment" required></textarea>
+
+        <label>How comfortable was the atmosphere?</label>
+        <select name="comfort" required>
+            <option value="Very Comfortable">Very Comfortable</option>
+            <option value="Comfortable">Comfortable</option>
+            <option value="Neutral">Neutral</option>
+            <option value="Uncomfortable">Uncomfortable</option>
+            <option value="Very Uncomfortable">Very Uncomfortable</option>
+        </select>
+
+        <label>How much time did you spend on self-learning?</label>
+        <select name="selfLearning" required>
+            <option value="Less than 1 hour per week">Less than 1 hour per week</option>
+            <option value="1-3 hours per week">1-3 hours per week</option>
+            <option value="3-5 hours per week">3-5 hours per week</option>
+            <option value="5-10 hours per week">5-10 hours per week</option>
+            <option value="More than 10 hours per week">More than 10 hours per week</option>
+        </select>
+
+        <label>What could be improved in the course?</label>
+        <textarea name="improvements" placeholder="E.g., 'The homework tasks had technical issues.'"></textarea>
+
+        <label>Share something positive about the course:</label>
+        <textarea name="positiveExperience" placeholder="E.g., 'The teamwork exercises were very engaging.'"></textarea>
+
+        <label>What is one memorable phrase or behavior of the instructor?</label>
+        <textarea name="memorableInstructor" placeholder="E.g., 'The instructor's favorite phrase was...'"></textarea>
+
+        <label>Additional comments:</label>
+        <textarea name="comment" placeholder="Write any additional thoughts or feedback here."></textarea>
+
         <button type="submit">Submit</button>
     </form>
 </div>
 <div class="feedback-display">
     <h3>Feedbacks</h3>
     <div id="feedbackList">
+        <!-- Sample detailed feedbacks -->
         <div class="feedback-entry">
-            <p><strong>Course:</strong> Economics</p>
-            <p><strong>Rating:</strong> ⭐⭐⭐⭐⭐</p>
-            <p><strong>Comment:</strong> Excellent course!</p>
+            <p><strong>Course:</strong> IT and Business Analytics</p>
+            <p><strong>Difficulty:</strong> Moderate</p>
+            <p><strong>Comfort:</strong> Very Comfortable</p>
+            <p><strong>Self-Learning Time:</strong> 5-10 hours per week</p>
+            <p><strong>Improvements:</strong> "Quizzes need revision due to technical mistakes in answers."</p>
+            <p><strong>Positive Experience:</strong> "A lot of teamwork and interactive class activities."</p>
+            <p><strong>Instructor's Memorable Phrase:</strong> "Focus on the journey, not just the outcome."</p>
+            <p><strong>Additional Comments:</strong> "I learned a lot from the discussions."</p>
+        </div>
+        <div class="feedback-entry">
+            <p><strong>Course:</strong> Artificial Intelligence</p>
+            <p><strong>Difficulty:</strong> Difficult</p>
+            <p><strong>Comfort:</strong> Comfortable</p>
+            <p><strong>Self-Learning Time:</strong> More than 10 hours per week</p>
+            <p><strong>Improvements:</strong> "The syllabus could have more detailed explanations."</p>
+            <p><strong>Positive Experience:</strong> "Interactive quizzes on new vocabulary were excellent."</p>
+            <p><strong>Instructor's Memorable Phrase:</strong> "Think outside the box."</p>
+            <p><strong>Additional Comments:</strong> "Sometimes the homework instructions were unclear."</p>
         </div>
     </div>
+</div>
+<div id="feedbackStats">
+    <p>Total Feedbacks: <span id="total-feedback">2</span></p>
+    <p>Average Comfort Level: <span id="avg-comfort">4.5</span> (out of 5)</p>
 </div>
 </body>
 </html>
